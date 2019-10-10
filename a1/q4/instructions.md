@@ -39,5 +39,15 @@
     tail result.txt 
     
     Cat all output correctly:
-    cat part-00016 file2.txt file3.txt file4.txt > ./mergedfile.txt
+    
+    hadoop fs -getmerge /user/assignment1/q4/output/part-00015 /user/assignment1/q4/output/part-00016 \
+    /user/assignment1/q4/output/part-00017 /user/assignment1/q4/output/part-00018 /user/assignment1/q4/output/part-00019 \
+    /user/assignment1/q4/output/part-00020 /user/assignment1/q4/output/part-00021 /user/assignment1/q4/output/part-00021 \
+    /user/assignment1/q4/output/part-00022 /user/assignment1/q4/output/part-00023 /user/assignment1/q4/output/part-00024 \
+    /user/assignment1/q4/output/part-00025 /user/assignment1/q4/output/part-00026 /user/assignment1/q4/output/part-00000 \
+    /user/assignment1/q4/output/part-00001 /user/assignment1/q4/output/part-00002 /user/assignment1/q4/output/part-00003 \
+    /user/assignment1/q4/output/part-00004 /user/assignment1/q4/output/part-00005 /user/assignment1/q4/output/part-00006 \
+    /user/assignment1/q4/output/part-00007 /user/assignment1/q4/output/part-00008 /user/assignment1/q4/output/part-00009 \
+    /user/assignment1/q4/output/part-00010 /user/assignment1/q4/output/part-00011 /user/assignment1/q4/output/part-00012 \
+    /user/assignment1/q4/output/part-00013 /user/assignment1/q4/output/part-00014 results.txt
     ```
