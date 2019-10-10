@@ -17,7 +17,7 @@
     $HADOOP_HOME/bin/hadoop jar \
     $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.7.6.jar \
     -files ./mapper.py,./reducer.py \
-    -input /user/assignment1/q1/shakespeare1.txt \
+    -input /user/text-files/shakespeare1.txt \
     -output /user/assignment1/q2/output \
     -mapper ./mapper.py \
     -reducer ./reducer.py

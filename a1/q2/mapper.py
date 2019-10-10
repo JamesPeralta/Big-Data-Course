@@ -2,7 +2,6 @@
 #mapper.py
 
 import sys
-import string
 import re
 
 for line in sys.stdin:
