@@ -10,7 +10,7 @@
     ```
 3. Navigate into the q2 python files
     ```
-    cd /home/ubuntu/a1/q2
+    cd /home/ubuntu/a1/q1
     ```
 4. Run the MapReduce job
     ```
