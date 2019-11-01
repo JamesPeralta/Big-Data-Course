@@ -10,7 +10,7 @@ BLACK = "BLACK"
 
 for line in sys.stdin:
     line = line.strip()
-    line_arr = line.split()
+    line_arr = line.strip().split()
 
     # retrieve the key
     key = line_arr[0]
@@ -24,10 +24,10 @@ for line in sys.stdin:
 
     # process Grey nodes
     if colour == GRAY:
-        print("{}   {}|{}|{}|{}".format(key, adj_list, score, BLACK, parent))
+        print("{}\t{}|{}|{}|{}".format(key, adj_list, score, BLACK, parent))
         child_score = str(int(score) + 1)
         for child in adj_list.split(","):
-            print("{}   {}|{}|{}|{}".format(child, "null", child_score, GRAY, key))
+            print("{}\t{}|{}|{}|{}".format(child, "null", child_score, GRAY, key))
     else:
         # emit White and Black
         print(line)
