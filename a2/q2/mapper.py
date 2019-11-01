@@ -30,4 +30,4 @@ for line in sys.stdin:
             print("{}\t{}|{}|{}|{}".format(child, "null", child_score, GRAY, key))
     else:
         # emit White and Black
-        print(line)
+        print("{}\t{}|{}|{}|{}".format(key, adj_list, score, colour, parent))

@@ -9,12 +9,14 @@ BLACK = "BLACK"
 
 
 def colour_check(node_colour):
-    if m_colour == WHITE and node_colour is not WHITE:
-        return node_colour
-    elif m_colour == GRAY and node_colour is not BLACK:
-        return GRAY
-    else:
+    if m_colour == BLACK or node_colour == BLACK:
         return BLACK
+    elif m_colour == WHITE and node_colour == GRAY:
+        return GRAY
+    elif m_colour == GRAY and node_colour == GRAY:
+        return GRAY
+    elif m_colour == GRAY and node_colour == WHITE:
+        return GRAY
 
 
 last_key = None
@@ -22,6 +24,7 @@ m_adj_list = None
 m_score = None
 m_colour = None
 m_parent = None
+m_keep_going = False
 for line in sys.stdin:
     line = line.strip()
     line_arr = line.strip().split()
@@ -35,6 +38,9 @@ for line in sys.stdin:
     score = value_arr[1]
     colour = value_arr[2]
     parent = value_arr[3]
+
+    if colour != BLACK:
+        m_keep_going = True
 
     if last_key is None:
         last_key = key
@@ -63,3 +69,6 @@ for line in sys.stdin:
         m_parent = parent
 
 print("{}\t{}|{}|{}|{}".format(last_key, m_adj_list, m_score, m_colour, m_parent))
+
+if m_keep_going:
+    sys.stderr.write("reporter:counter:CUSTOM,keep_going,1")
